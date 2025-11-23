@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import FeaturePreview from "@/components/FeaturePreview";
 
 const featureData: Record<
   string,
@@ -211,12 +212,19 @@ const featureData: Record<
   },
 };
 
-export default function FeaturePage({
+export function generateStaticParams() {
+  return Object.keys(featureData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default async function FeaturePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const feature = featureData[params.slug];
+  const { slug } = await params;
+  const feature = featureData[slug];
 
   if (!feature) {
     notFound();
@@ -259,10 +267,8 @@ export default function FeaturePage({
 
           {/* Interactive Preview Section */}
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 overflow-hidden mb-12">
-            <div className="aspect-video bg-slate-700 flex items-center justify-center">
-              <span className="text-slate-400 text-2xl">
-                Interactive Preview
-              </span>
+            <div className="aspect-video bg-slate-700">
+              <FeaturePreview slug={slug} />
             </div>
           </div>
 

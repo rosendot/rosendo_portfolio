@@ -142,14 +142,9 @@ export default function Features() {
               <Link
                 key={feature.id}
                 href={`/features/${feature.id}`}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 hover:border-purple-500 transition-all overflow-hidden"
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 hover:border-purple-500 transition-all p-6"
               >
-                <div className="aspect-video bg-slate-700 flex items-center justify-center group-hover:bg-slate-600 transition-colors">
-                  <span className="text-slate-500 group-hover:text-slate-400 transition-colors">
-                    Feature Preview
-                  </span>
-                </div>
-                <div className="p-6">
+                <div>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
                       {feature.title}
