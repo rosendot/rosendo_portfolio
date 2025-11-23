@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
@@ -10,6 +11,7 @@ export default function Projects() {
       technologies: ["Next.js 15", "TypeScript", "Shopify API", "Tailwind CSS"],
       status: "Completed",
       url: "https://www.givenministryboardgames.com/",
+      image: "/projects/given-ministry.webp",
     },
     {
       id: 2,
@@ -61,11 +63,22 @@ export default function Projects() {
                 key={project.id}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 hover:border-purple-500 transition-all overflow-hidden"
               >
-                <div className="aspect-video bg-slate-700 flex items-center justify-center">
-                  <span className="text-slate-500 text-lg">
-                    Project Preview
-                  </span>
-                </div>
+                {"image" in project && project.image ? (
+                  <div className="aspect-video relative bg-slate-700">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-video bg-slate-700 flex items-center justify-center">
+                    <span className="text-slate-500 text-lg">
+                      Project Preview
+                    </span>
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-2xl font-semibold text-white">
