@@ -15,6 +15,15 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: "Mi Fiesta Rentals",
+      description:
+        "Modern party rental website for Rio Grande Valley with interactive GeoJSON delivery zone mapping, tables & chairs inventory display, and zone-based pricing. JSON-based data management with plans for Stripe/Shopify integration.",
+      technologies: ["Next.js 15", "TypeScript", "Leaflet", "Tailwind CSS"],
+      status: "In Progress",
+      image: "/projects/mi-fiesta-rentals.webp",
+    },
+    {
+      id: 3,
       title: "3D Portfolio Showcase",
       description:
         "An interactive 3D portfolio featuring animated models and smooth transitions.",
@@ -22,7 +31,7 @@ export default function Projects() {
       status: "Completed",
     },
     {
-      id: 3,
+      id: 4,
       title: "E-Commerce Platform",
       description:
         "Modern e-commerce solution with cart, checkout, and admin panel.",
@@ -30,7 +39,7 @@ export default function Projects() {
       status: "In Progress",
     },
     {
-      id: 4,
+      id: 5,
       title: "Creative Agency Site",
       description:
         "Sleek agency website with scroll animations and interactive elements.",
