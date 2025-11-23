@@ -128,6 +128,24 @@ To export as static HTML:
 1. Add template data to `/templates/[slug]/page.tsx`
 2. Add the template to the gallery in `/templates/page.tsx`
 
+### Adding Certifications & Licenses
+1. Edit `src/app/certifications/page.tsx`
+2. Add to the `certifications` or `licenses` array:
+   ```typescript
+   {
+     id: 2,
+     title: "Your Certification Name",
+     issuer: "Issuing Organization",
+     date: "January 2025",
+     credentialId: "CERT-12345",
+     description: "What this certification demonstrates",
+     category: "Development",
+     image: "/certificates/cert-name.png", // Optional
+   }
+   ```
+3. Optionally add images to `public/certificates/` or `public/licenses/`
+4. Uncomment the image display code in the component if using images
+
 ### Adding 3D Components
 1. Create new component in `src/components/`
 2. Use `"use client"` directive for client-side rendering
