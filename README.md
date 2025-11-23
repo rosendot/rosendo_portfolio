@@ -69,6 +69,7 @@ npm run dev
 - **/projects** - Project showcase
 - **/templates** - Template gallery
 - **/templates/[slug]** - Individual template details
+- **/certifications** - Certifications and licenses showcase
 - **/demo** - Interactive 3D demo
 - **/contact** - Contact form
 

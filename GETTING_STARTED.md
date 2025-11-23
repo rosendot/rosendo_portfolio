@@ -20,6 +20,7 @@
 - **About** ([src/app/about/page.tsx](src/app/about/page.tsx)) - Your bio and skills
 - **Projects** ([src/app/projects/page.tsx](src/app/projects/page.tsx)) - Showcase your work
 - **Templates** ([src/app/templates/page.tsx](src/app/templates/page.tsx)) - Template gallery
+- **Certifications** ([src/app/certifications/page.tsx](src/app/certifications/page.tsx)) - Certifications and licenses
 - **3D Demo** ([src/app/demo/page.tsx](src/app/demo/page.tsx)) - Interactive 3D showcase
 - **Contact** ([src/app/contact/page.tsx](src/app/contact/page.tsx)) - Contact form
 
@@ -85,6 +86,50 @@ Add custom colors in the theme.extend section.
 - `purple-600` → your primary color
 - `slate-900` → your dark background
 - Search and replace across all files
+
+## Adding Certifications & Licenses
+
+**In [src/app/certifications/page.tsx](src/app/certifications/page.tsx:5):**
+
+Add new certifications to the array:
+```typescript
+const certifications = [
+  {
+    id: 1,
+    title: "AWS Certified Developer",
+    issuer: "Amazon Web Services",
+    date: "January 2025",
+    credentialId: "AWS-12345",
+    description: "Demonstrates ability to develop and maintain applications on AWS",
+    category: "Cloud",
+    image: "/certificates/aws-developer.png", // Optional
+  },
+  // Add more...
+];
+```
+
+Add new licenses to the array:
+```typescript
+const licenses = [
+  {
+    id: 1,
+    title: "Professional Engineer License",
+    issuer: "State Engineering Board",
+    date: "January 2025",
+    licenseNumber: "PE-12345",
+    expiryDate: "January 2028",
+    description: "Licensed to practice professional engineering",
+    category: "Professional",
+    image: "/licenses/pe-license.png", // Optional
+  },
+  // Add more...
+];
+```
+
+**To add certificate/license images:**
+1. Place images in `public/certificates/` or `public/licenses/`
+2. Add the `image` property to your certification/license object
+3. Uncomment the image display code in the page
 
 ## Adding 3D Content
 

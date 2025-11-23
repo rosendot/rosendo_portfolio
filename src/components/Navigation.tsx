@@ -13,6 +13,7 @@ export default function Navigation() {
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
     { name: "Templates", path: "/templates" },
+    { name: "Certifications", path: "/certifications" },
     { name: "3D Demo", path: "/demo" },
     { name: "Contact", path: "/contact" },
   ];
