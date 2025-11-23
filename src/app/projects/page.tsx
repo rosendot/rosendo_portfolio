@@ -15,36 +15,19 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: "RosendoHQ",
+      description:
+        "Comprehensive full-stack personal life management platform with 13 modules including shopping lists, media tracking, reading tracker, car maintenance, habits & goals, and more. Features Supabase backend, real-time updates, and Sentry monitoring.",
+      technologies: ["Next.js 15", "TypeScript", "Supabase", "Tailwind CSS"],
+      status: "In Progress",
+    },
+    {
+      id: 3,
       title: "Mi Fiesta Rentals",
       description:
         "Modern party rental website for Rio Grande Valley with interactive GeoJSON delivery zone mapping, tables & chairs inventory display, and zone-based pricing. JSON-based data management with plans for Stripe/Shopify integration.",
       technologies: ["Next.js 15", "TypeScript", "Leaflet", "Tailwind CSS"],
       status: "In Progress",
-      image: "/projects/mi-fiesta-rentals.webp",
-    },
-    {
-      id: 3,
-      title: "3D Portfolio Showcase",
-      description:
-        "An interactive 3D portfolio featuring animated models and smooth transitions.",
-      technologies: ["Three.js", "React", "GSAP"],
-      status: "Completed",
-    },
-    {
-      id: 4,
-      title: "E-Commerce Platform",
-      description:
-        "Modern e-commerce solution with cart, checkout, and admin panel.",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
-      status: "In Progress",
-    },
-    {
-      id: 5,
-      title: "Creative Agency Site",
-      description:
-        "Sleek agency website with scroll animations and interactive elements.",
-      technologies: ["React", "Framer Motion", "CSS"],
-      status: "Completed",
     },
   ];
 
@@ -82,10 +65,22 @@ export default function Projects() {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-video bg-slate-700 flex items-center justify-center">
-                    <span className="text-slate-500 text-lg">
-                      Project Preview
-                    </span>
+                  <div className="aspect-video bg-gradient-to-br from-slate-700 to-slate-600 flex flex-col items-center justify-center gap-3">
+                    {project.status === "In Progress" ? (
+                      <>
+                        <div className="text-6xl">🚧</div>
+                        <span className="text-yellow-300 text-lg font-semibold">
+                          Under Construction
+                        </span>
+                        <span className="text-slate-400 text-sm">
+                          Coming Soon
+                        </span>
+                      </>
+                    ) : (
+                      <span className="text-slate-500 text-lg">
+                        Project Preview
+                      </span>
+                    )}
                   </div>
                 )}
                 <div className="p-6">
@@ -94,11 +89,10 @@ export default function Projects() {
                       {project.title}
                     </h3>
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        project.status === "Completed"
-                          ? "bg-green-500/20 text-green-300"
-                          : "bg-yellow-500/20 text-yellow-300"
-                      }`}
+                      className={`px-3 py-1 rounded-full text-xs font-semibold ${project.status === "Completed"
+                        ? "bg-green-500/20 text-green-300"
+                        : "bg-yellow-500/20 text-yellow-300"
+                        }`}
                     >
                       {project.status}
                     </span>
