@@ -4,6 +4,15 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Given Ministry Board Game Store",
+      description:
+        "Headless e-commerce site for a family-owned board game store with full Shopify integration, real-time cart management, and custom warm earth-toned design.",
+      technologies: ["Next.js 15", "TypeScript", "Shopify API", "Tailwind CSS"],
+      status: "Completed",
+      url: "https://www.givenministryboardgames.com/",
+    },
+    {
+      id: 2,
       title: "3D Portfolio Showcase",
       description:
         "An interactive 3D portfolio featuring animated models and smooth transitions.",
@@ -11,7 +20,7 @@ export default function Projects() {
       status: "Completed",
     },
     {
-      id: 2,
+      id: 3,
       title: "E-Commerce Platform",
       description:
         "Modern e-commerce solution with cart, checkout, and admin panel.",
@@ -19,7 +28,7 @@ export default function Projects() {
       status: "In Progress",
     },
     {
-      id: 3,
+      id: 4,
       title: "Creative Agency Site",
       description:
         "Sleek agency website with scroll animations and interactive elements.",
@@ -73,7 +82,7 @@ export default function Projects() {
                     </span>
                   </div>
                   <p className="text-slate-300 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -83,6 +92,16 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
+                  {"url" in project && project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      View Live Site →
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
