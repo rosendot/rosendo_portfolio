@@ -20,6 +20,24 @@ const Carousel2D = dynamic(() => import("@/components/Carousel2D"), {
   ),
 });
 
+const ItemCards = dynamic(() => import("@/components/ItemCards"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-slate-700">
+      <span className="text-slate-400 text-2xl">Loading...</span>
+    </div>
+  ),
+});
+
+const HeroSections = dynamic(() => import("@/components/HeroSections"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-slate-700">
+      <span className="text-slate-400 text-2xl">Loading...</span>
+    </div>
+  ),
+});
+
 interface FeaturePreviewProps {
   slug: string;
 }
@@ -32,6 +50,14 @@ export default function FeaturePreview({ slug }: FeaturePreviewProps) {
 
   if (slug === "2d-carousel") {
     return <Carousel2D />;
+  }
+
+  if (slug === "item-cards") {
+    return <ItemCards />;
+  }
+
+  if (slug === "hero-sections") {
+    return <HeroSections />;
   }
 
   // For all other features, show a placeholder
