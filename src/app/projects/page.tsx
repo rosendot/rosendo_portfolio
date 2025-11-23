@@ -8,7 +8,7 @@ export default function Projects() {
       title: "Given Ministry Board Game Store",
       description:
         "Headless e-commerce site for a family-owned board game store with full Shopify integration, real-time cart management, and custom warm earth-toned design.",
-      technologies: ["Next.js 15", "TypeScript", "Shopify API", "Tailwind CSS"],
+      technologies: ["Next.js", "Shopify API", "TypeScript"],
       status: "Completed",
       url: "https://www.givenministryboardgames.com/",
       image: "/projects/given-ministry.webp",
@@ -18,7 +18,7 @@ export default function Projects() {
       title: "RosendoHQ",
       description:
         "Comprehensive full-stack personal life management platform with 13 modules including shopping lists, media tracking, reading tracker, car maintenance, habits & goals, and more. Features Supabase backend, real-time updates, and Sentry monitoring.",
-      technologies: ["Next.js 15", "TypeScript", "Supabase", "Tailwind CSS"],
+      technologies: ["Supabase", "React", "Sentry", "PostgreSQL"],
       status: "In Progress",
     },
     {
@@ -26,7 +26,7 @@ export default function Projects() {
       title: "Mi Fiesta Rentals",
       description:
         "Modern party rental website for Rio Grande Valley with interactive GeoJSON delivery zone mapping, tables & chairs inventory display, and zone-based pricing. JSON-based data management with plans for Stripe/Shopify integration.",
-      technologies: ["Next.js 15", "TypeScript", "Leaflet", "Tailwind CSS"],
+      technologies: ["Leaflet", "GeoJSON", "Tailwind CSS"],
       status: "In Progress",
     },
   ];
