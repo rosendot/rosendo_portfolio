@@ -11,7 +11,7 @@ export default function Projects() {
       technologies: ["Next.js", "Shopify API", "TypeScript"],
       status: "Completed",
       url: "https://www.givenministryboardgames.com/",
-      image: "/projects/given-ministry.webp",
+      image: "/given-ministry.webp",
     },
     {
       id: 2,
